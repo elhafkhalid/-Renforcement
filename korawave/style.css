@@ -1,0 +1,71 @@
+body {
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #27ae60;
+  color: white;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  color: rgb(123, 240, 123);
+}
+
+.prochaine-match {
+  border-left: solid red 4px;
+  background-color: white;
+  padding: 15px;
+  box-shadow: 0 0 15px #000904;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: solid gray;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+fieldset input {
+  width: 1%;
+}
+
+.condition input{
+    width: 1%;
+}
+
+button {
+    color: white;
+    background-color: #27AE60;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 20px;
+    border: none;
+    font-size: 20px;
+}
+
+button:hover{
+    background-color: green;
+}
+
+footer{
+    text-align: center;
+}

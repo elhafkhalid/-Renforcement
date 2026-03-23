@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>TicketMatch</h1>
+      <nav>
+        <a href="">Acceuil</a>
+        <a href="">Matchs</a>
+        <a href="">Mes reserveations</a>
+      </nav>
+    </header>
+    <main>
+      <div id="container-matchs" class="prochaine-match"></div>
+      <h1>Réservation de ticket</h1>
+      <p>Tolal de reservation = <span id="compteur">0</span></p>
+      <div class="max-w-3xl mx-auto px-4 py-8">
+        <form id="formulaire" action="" method="post">
+          <div class="flex flex-col gap-2 md:flex-row">
+            <div class="flex-1">
+              <label for="nom">Nom complet</label><br />
+              <input type="text" id="nom" name="nom" required />
+            </div>
+            <br />
+            <div class="flex-1">
+              <label for="Email">Email</label><br />
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+          <br />
+          <div>
+            <label for="telephone">Telephone</label><br />
+            <input type="tel" id="telephone" name="telephone" required />
+          </div>
+          <br />
+          <div>
+            <label for="match">Match</label><br />
+            <select name="match" id="match" required>
+              <option value="0">choisir match</option>
+              <option value="1">FC KOORAWAVE vs Raja Club — 15/03/2025</option>
+              <option value="2">FC KOORAWAVE vs Wydad AC — 22/03/2025</option>
+              <option value="3">FC KOORAWAVE vs AS FAR — 05/04/2025</option>
+            </select>
+          </div>
+          <br />
+          <div>
+            <fieldset>
+              <legend>Catégorie de place</legend>
+
+              <input
+                type="radio"
+                id="tribune"
+                name="categorie"
+                value="tribune"
+                required
+              />
+              <label for="tribune">Tribune</label> <br />
+
+              <input
+                type="radio"
+                id="virage"
+                name="categorie"
+                value="virage"
+                required
+              />
+              <label for="virage">Virage</label> <br />
+
+              <input
+                type="radio"
+                id="pelouse"
+                name="categorie"
+                value="pelouse"
+                required
+              />
+              <label for="pelouse">Pelouse</label> <br />
+            </fieldset>
+          </div>
+          <br />
+          <div>
+            <label for="ticket">Nombre de ticket</label><br />
+            <input
+              type="number"
+              id="ticket"
+              name="ticket"
+              min="1"
+              max="10"
+              required
+            />
+          </div>
+          <br />
+          <div>
+            <label for="commentaire">Commentaire</label><br />
+            <textarea name="commentaire" id="commentaire"></textarea>
+          </div>
+          <br />
+          <div class="condition">
+            <input type="checkbox" id="condition" name="condition" required />
+            <label for="condition"> J'accepte les conditions générales</label>
+          </div>
+          <br />
+          <button
+            class="bg-green-600 text-white px-4 py-2 rounded font-semibold hover:bg-green-700"
+            type="submit"
+          >
+            Réserver mon ticket
+          </button>
+        </form>
+      </div>
+      <h2>Mes Réservations</h2>
+      <div>
+        <table border="1" id="table-reservations">
+          <thead>
+            <tr>
+              <th>Match</th>
+              <th>Catégorie</th>
+              <th>Nb Tickets</th>
+              <th>Prix Total</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="body">
+             
+          </tbody>
+        </table>
+      </div>
+      <!-- <section class="prochaine-match">
+                <h2> Prochain match </h2>
+                <p> EquipA vs EquipB </p>
+                <p> 01/01/2000 13:00 </p>
+                <p> Stade1 </p>
+            </section> -->
+      <section>
+        <h2>A propos du club</h2>
+        <p>@Description</p>
+      </section>
+    </main>
+    <footer>
+      <span> « © 2025 FC KOORAWAVE — Tous droits réservés »</span>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

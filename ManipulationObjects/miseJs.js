@@ -164,7 +164,7 @@ function filterSelonDisp(tableau) {
     }));
 }
 
-//console.log(filterSelonDisp(flotte));
+console.log(filterSelonDisp(flotte));
 
 function grouperParCategorie(tableau) {
   let result = tableau.reduce((acc, element) => {
@@ -196,7 +196,7 @@ function grouperParCategorie(tableau) {
   return result;
 }
 
-//console.log(grouperParCategorie(flotte));
+console.log(grouperParCategorie(flotte));
 
 // Construire un objet groupé par catégorie. Pour chaque catégorie calculer :
 //      — nbTotal        : nombre de véhicules dans la catégorie
@@ -205,8 +205,4 @@ function grouperParCategorie(tableau) {
 //      — noteMoyenne    : moyenne des notes, arrondie à 1 décimale
 //      — tauxDispo      : (nbDisponibles / nbTotal × 100), arrondi
 
-setTimeout(function () {
-    console.log("lkjhgtyui");
-    
-},2000)
 
